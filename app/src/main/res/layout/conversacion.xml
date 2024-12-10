@@ -1,0 +1,79 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConversacionActivity">
+
+    <!-- Contenedor de botones (Contactos y Cerrar sesión) -->
+    <LinearLayout
+        android:id="@+id/topButtonsLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"
+        android:gravity="start">
+
+        <Button
+            android:id="@+id/contactosButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contactos"
+            android:padding="10dp"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Cerrar sesión" />
+    </LinearLayout>
+
+    <!-- Área de mensajes -->
+    <LinearLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        android:weightSum="1"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/topButtonsLayout"
+        app:layout_constraintBottom_toTopOf="@+id/messageInputLayout"/>
+
+    <!-- Área de entrada de mensajes -->
+    <LinearLayout
+        android:id="@+id/messageInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/messageField"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Escribe un mensaje"
+            android:padding="10dp"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:textColor="@android:color/white"
+            android:padding="10dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
