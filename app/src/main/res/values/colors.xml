@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Colores Globales -->
+    <color name="colorPrimary">#00796B</color> <!-- Elige uno de los colores -->
+    <color name="colorSecondary">#03DAC5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="fondo_login">#3F51B5</color> <!-- Si lo necesitas -->
+    <color name="fondo_contactos">#F4F4F4</color>
 </resources>

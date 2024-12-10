@@ -5,8 +5,10 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/fondo_login">
 
+    <!-- Contenedor principal -->
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="0dp"
@@ -16,7 +18,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center">
+
+        <!-- Título de la aplicación -->
+        <TextView
+            android:id="@+id/Titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Conecta Mobile"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Logo de la aplicación -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo"/>
+
 
         <!-- Título de la pantalla de inicio de sesión -->
         <TextView
@@ -27,7 +51,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:padding="8dp" />
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="16dp" />
 
         <!-- Campo de texto para el correo electrónico -->
         <EditText
@@ -35,7 +60,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo Electrónico"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/white"/>
+
 
         <!-- Campo de texto para la contraseña -->
         <EditText
@@ -43,21 +70,27 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="@android:color/white"/>
+
 
         <!-- Botón de inicio de sesión -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="loginUser"
-            android:text="Iniciar Sesión" />
+            android:text="Iniciar Sesión"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorPrimary" />
 
         <!-- Botón para crear una nueva cuenta -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="goToRegister"
-            android:text="Crear Cuenta" />
+            android:text="Crear Cuenta"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/colorSecondary" />
 
     </LinearLayout>
 

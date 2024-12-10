@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConversacionActivity">
+    tools:context=".ConversacionActivity"
+    android:background="@color/fondo_login"> <!-- Fondo personalizado -->
 
     <!-- Contenedor de botones (Contactos y Cerrar sesión) -->
     <LinearLayout
@@ -21,6 +23,8 @@
             android:layout_height="wrap_content"
             android:text="Contactos"
             android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary"
             android:layout_marginEnd="16dp" />
 
         <Button
@@ -28,7 +32,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:text="Cerrar sesión" />
+            android:text="Cerrar sesión"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorSecondary" />
     </LinearLayout>
 
     <!-- Área de mensajes -->
@@ -64,7 +70,8 @@
             android:layout_weight="1"
             android:hint="Escribe un mensaje"
             android:padding="10dp"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:backgroundTint="@android:color/white" />
 
         <Button
             android:id="@+id/sendButton"

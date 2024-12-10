@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@color/fondo_login"> <!-- Fondo personalizado -->
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -27,7 +28,8 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:padding="8dp" />
+            android:padding="8dp"
+            android:textColor="@android:color/white" /> <!-- Color de texto blanco -->
 
         <!-- Campo de texto para el nombre de usuario -->
         <EditText
@@ -35,7 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nombre de usuario"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black" />
 
         <!-- Campo de texto para el correo electrónico -->
         <EditText
@@ -43,7 +47,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Correo Electrónico"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black" />
 
         <!-- Campo de texto para la contraseña -->
         <EditText
@@ -51,7 +57,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black" />
 
         <!-- Campo de texto para confirmar la contraseña -->
         <EditText
@@ -59,14 +67,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Confirmar Contraseña"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/black" />
 
         <!-- Botón para registrarse -->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="registerUser"
-            android:text="Registrar" />
+            android:text="Registrar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/colorPrimary" /> <!-- Color de fondo personalizado -->
 
         <!-- Enlace para ir al login si ya tiene cuenta -->
         <TextView

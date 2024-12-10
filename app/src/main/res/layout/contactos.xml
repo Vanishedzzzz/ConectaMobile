@@ -1,9 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ContactosActivity">
+    tools:context=".ContactosActivity"
+    android:background="@color/fondo_contactos"> <!-- Fondo personalizado -->
 
     <!-- Contenedor Scrollable de los contactos -->
     <ScrollView
@@ -19,7 +21,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="8dp" />
+            android:padding="8dp">
+            <!-- Aquí irán los contactos -->
+        </LinearLayout>
     </ScrollView>
 
     <!-- Contenedor de botones -->
@@ -30,16 +34,19 @@
         android:orientation="horizontal"
         android:gravity="center"
         android:padding="16dp"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="ExtraText">
 
-        <!-- Botón Volver -->
         <!-- Botón Volver -->
         <Button
             android:id="@+id/volverButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Volver"
-            android:onClick="volverAlChat" /> <!-- Método para volver al chat -->
+            android:onClick="volverAlChat"
+            android:backgroundTint="@color/colorAccent"/>  <!-- Fondo del botón -->
+        android:textColor="@android:color/white"
+        android:padding="10dp" /> <!-- Estilo del botón -->
 
         <!-- Botón Agregar Contacto -->
         <Button
@@ -47,8 +54,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Agregar Contacto"
-            android:onClick="abrirRegistro" /> <!-- Método para abrir el registro -->
-
+            android:onClick="abrirRegistro"
+            android:backgroundTint="@color/colorPrimary"/>  <!-- Fondo del botón -->
+        android:textColor="@android:color/white"
+        android:padding="10dp" /> <!-- Estilo del botón -->
 
     </LinearLayout>
 
